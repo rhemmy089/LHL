@@ -1,0 +1,85 @@
+2022-02-20T03:00:55.682704Z	    9 Connect	root@localhost on  using Socket
+2022-02-20T03:00:55.682973Z	    9 Query	select @@version_comment limit 1
+2022-02-20T03:00:58.206501Z	    9 Query	show databases
+2022-02-20T03:01:02.431377Z	    9 Query	SELECT DATABASE()
+2022-02-20T03:01:02.431609Z	    9 Init DB	mysql
+2022-02-20T03:01:02.432402Z	    9 Query	show databases
+2022-02-20T03:01:02.433075Z	    9 Query	show tables
+2022-02-20T03:01:02.437115Z	    9 Field List	columns_priv 
+2022-02-20T03:01:02.437366Z	    9 Field List	component 
+2022-02-20T03:01:02.437487Z	    9 Field List	db 
+2022-02-20T03:01:02.437783Z	    9 Field List	default_roles 
+2022-02-20T03:01:02.437953Z	    9 Field List	engine_cost 
+2022-02-20T03:01:02.438219Z	    9 Field List	func 
+2022-02-20T03:01:02.438337Z	    9 Field List	general_log 
+2022-02-20T03:01:02.439280Z	    9 Field List	global_grants 
+2022-02-20T03:01:02.439457Z	    9 Field List	gtid_executed 
+2022-02-20T03:01:02.439642Z	    9 Field List	help_category 
+2022-02-20T03:01:02.440554Z	    9 Field List	help_keyword 
+2022-02-20T03:01:02.442365Z	    9 Field List	help_relation 
+2022-02-20T03:01:02.443709Z	    9 Field List	help_topic 
+2022-02-20T03:01:02.446261Z	    9 Field List	innodb_index_stats 
+2022-02-20T03:01:02.447338Z	    9 Field List	innodb_table_stats 
+2022-02-20T03:01:02.448209Z	    9 Field List	password_history 
+2022-02-20T03:01:02.448410Z	    9 Field List	plugin 
+2022-02-20T03:01:02.448995Z	    9 Field List	procs_priv 
+2022-02-20T03:01:02.449271Z	    9 Field List	proxies_priv 
+2022-02-20T03:01:02.449534Z	    9 Field List	replication_asynchronous_connection_failover 
+2022-02-20T03:01:02.450629Z	    9 Field List	replication_asynchronous_connection_failover_managed 
+2022-02-20T03:01:02.451601Z	    9 Field List	replication_group_configuration_version 
+2022-02-20T03:01:02.452380Z	    9 Field List	replication_group_member_actions 
+2022-02-20T03:01:02.453303Z	    9 Field List	role_edges 
+2022-02-20T03:01:02.453582Z	    9 Field List	server_cost 
+2022-02-20T03:01:02.453881Z	    9 Field List	servers 
+2022-02-20T03:01:02.454157Z	    9 Field List	slave_master_info 
+2022-02-20T03:01:02.455170Z	    9 Field List	slave_relay_log_info 
+2022-02-20T03:01:02.455908Z	    9 Field List	slave_worker_info 
+2022-02-20T03:01:02.456390Z	    9 Field List	slow_log 
+2022-02-20T03:01:02.457875Z	    9 Field List	tables_priv 
+2022-02-20T03:01:02.458175Z	    9 Field List	time_zone 
+2022-02-20T03:01:02.458407Z	    9 Field List	time_zone_leap_second 
+2022-02-20T03:01:02.458616Z	    9 Field List	time_zone_name 
+2022-02-20T03:01:02.458783Z	    9 Field List	time_zone_transition 
+2022-02-20T03:01:02.459017Z	    9 Field List	time_zone_transition_type 
+2022-02-20T03:01:02.459358Z	    9 Field List	user 
+2022-02-20T03:01:07.373140Z	    9 Query	show tables
+2022-02-20T03:01:10.167274Z	    9 Query	SELECT * FROM user
+2022-02-20T03:01:13.274571Z	    9 Query	SELECT DATABASE()
+2022-02-20T03:01:13.274934Z	    9 Init DB	phl
+2022-02-20T03:01:13.275849Z	    9 Query	show databases
+2022-02-20T03:01:13.276443Z	    9 Query	show tables
+2022-02-20T03:01:13.277190Z	    9 Field List	customers 
+2022-02-20T03:01:15.536553Z	    9 Query	show tables
+2022-02-20T03:01:21.694024Z	    9 Query	SELECT * FROM customers
+2022-02-20T03:01:31.159492Z	    9 Query	SELECT * FROM customers LIMIT 5
+2022-02-20T03:01:34.242985Z	    9 Quit	
+2022-02-20T03:01:46.748188Z	   10 Connect	root@localhost on  using Socket
+2022-02-20T03:01:46.748326Z	   10 Query	/*!40100 SET @@SQL_MODE='' */
+2022-02-20T03:01:46.748435Z	   10 Query	/*!40103 SET TIME_ZONE='+00:00' */
+2022-02-20T03:01:46.748574Z	   10 Query	/*!80000 SET SESSION information_schema_stats_expiry=0 */
+2022-02-20T03:01:46.748680Z	   10 Query	SET SESSION NET_READ_TIMEOUT= 86400, SESSION NET_WRITE_TIMEOUT= 86400
+2022-02-20T03:01:46.748820Z	   10 Query	SHOW VARIABLES LIKE 'gtid\_mode'
+2022-02-20T03:01:46.753077Z	   10 Query	SELECT LOGFILE_GROUP_NAME, FILE_NAME, TOTAL_EXTENTS, INITIAL_SIZE, ENGINE, EXTRA FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'UNDO LOG' AND FILE_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IN (SELECT DISTINCT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('phl'))) GROUP BY LOGFILE_GROUP_NAME, FILE_NAME, ENGINE, TOTAL_EXTENTS, INITIAL_SIZE ORDER BY LOGFILE_GROUP_NAME
+2022-02-20T03:01:46.756231Z	   10 Query	SELECT DISTINCT TABLESPACE_NAME, FILE_NAME, LOGFILE_GROUP_NAME, EXTENT_SIZE, INITIAL_SIZE, ENGINE FROM INFORMATION_SCHEMA.FILES WHERE FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('phl')) ORDER BY TABLESPACE_NAME, LOGFILE_GROUP_NAME
+2022-02-20T03:01:46.757327Z	   10 Query	SHOW VARIABLES LIKE 'ndbinfo\_version'
+2022-02-20T03:01:46.763600Z	   10 Init DB	phl
+2022-02-20T03:01:46.763710Z	   10 Query	show tables
+2022-02-20T03:01:46.765171Z	   10 Query	LOCK TABLES `customers` READ /*!32311 LOCAL */
+2022-02-20T03:01:46.769709Z	   10 Query	show table status like 'customers'
+2022-02-20T03:01:46.772197Z	   10 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2022-02-20T03:01:46.772305Z	   10 Query	SET SESSION character_set_results = 'binary'
+2022-02-20T03:01:46.772375Z	   10 Query	show create table `customers`
+2022-02-20T03:01:46.772772Z	   10 Query	SET SESSION character_set_results = 'utf8mb4'
+2022-02-20T03:01:46.772883Z	   10 Query	show fields from `customers`
+2022-02-20T03:01:46.774238Z	   10 Query	show fields from `customers`
+2022-02-20T03:01:46.775014Z	   10 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `customers`
+2022-02-20T03:01:46.775651Z	   10 Query	SET SESSION character_set_results = 'binary'
+2022-02-20T03:01:46.775720Z	   10 Query	use `phl`
+2022-02-20T03:01:46.775799Z	   10 Query	select @@collation_database
+2022-02-20T03:01:46.775886Z	   10 Query	SHOW TRIGGERS LIKE 'customers'
+2022-02-20T03:01:46.777051Z	   10 Query	SET SESSION character_set_results = 'utf8mb4'
+2022-02-20T03:01:46.777108Z	   10 Query	SET SESSION character_set_results = 'binary'
+2022-02-20T03:01:46.777571Z	   10 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'phl' AND TABLE_NAME = 'customers'
+2022-02-20T03:01:46.778175Z	   10 Query	SET SESSION character_set_results = 'utf8mb4'
+2022-02-20T03:01:46.778230Z	   10 Query	UNLOCK TABLES
+2022-02-20T03:01:46.782060Z	   10 Quit	

